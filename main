@@ -10,10 +10,10 @@ def get_commute_time():
     duration = directions['duration']['text']
 
     def send_text(to, from_, message):
-    twilioi_sid = "AC130102a3063a7d20d250b4a11b7b4d7a"
-    twiliio_token = "5011284b55804fee56863513aa948885"
-    twilio_number = "+18449161556"
-    my_phone = "+13146209042"
+    twilioi_sid = ""
+    twiliio_token = ""
+    twilio_number = ""
+    my_phone = ""
     client = Client(twilio_sid, twilio_token)
     clientMessage.create
     to = my_phone
