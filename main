@@ -1,0 +1,35 @@
+import datetime,
+import googlemaps,
+from twilio.rest import Client
+def get_commute_time():
+    gymAddress = 2051 S Lindbergh Blvd Saint Louis MO 63144
+    campusAddress = 1 Brookings Dr Saint Louis MO 63130
+    api_key = API_KEY\,
+    googleMaps = googlemaps.Client(key=api_key)
+    directions = googleMaps.directions(gymAddress, campusAddress)
+    duration = directions['duration']['text']
+
+    def send_text(to, from_, message):
+    twilioi_sid = "AC130102a3063a7d20d250b4a11b7b4d7a"
+    twiliio_token = "5011284b55804fee56863513aa948885"
+    twilio_number = "+18449161556"
+    my_phone = "+13146209042"
+    client = Client(twilio_sid, twilio_token)
+    clientMessage.create
+    to = my_phone
+    body = message
+    senderBe = twilio_number
+
+    def main():
+        print('running')
+        commuteTime = get_commute_time()
+        currentTime = datetime.now
+        arrivalTime = (currentTime + commuteTime).strftime(%H:%M:%S)
+        notification = (
+            "Drive to campus is about " + {commuteTime} + " right now"
+            "Will get to campus at " + {arrivalTime} + " if you leave now"
+        )
+     send_text(notification)
+
+     if __name__ == "__main__":
+        main()
